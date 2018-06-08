@@ -17,7 +17,9 @@ sim = MatterSim.Simulator()
 sim.setCameraResolution(WIDTH, HEIGHT)
 sim.setCameraVFOV(VFOV)
 sim.init()
-sim.newEpisode('2t7WUuJeko7', '1e6b606b44df4a6086c0f97e826d4d15', 0, 0)
+
+house_id = sys.argv[1]
+sim.newEpisode(house_id, '', 0, 0)
 
 
 heading = 0
@@ -38,7 +40,7 @@ while True:
         fontScale = 3.0/loc.rel_distance
         x = int(WIDTH/2 + loc.rel_heading/HFOV*WIDTH)
         y = int(HEIGHT/2 - loc.rel_elevation/VFOV*HEIGHT)
-        cv2.putText(im, str(idx + 1), (x, y), cv2.FONT_HERSHEY_SIMPLEX, 
+        cv2.putText(im, str(idx + 1), (x, y), cv2.FONT_HERSHEY_SIMPLEX,
             fontScale, TEXT_COLOR, thickness=3)
     cv2.imshow('displaywin', im)
     k = cv2.waitKey(1)
