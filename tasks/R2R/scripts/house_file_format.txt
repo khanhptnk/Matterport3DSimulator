@@ -1,0 +1,11 @@
+H name label #images #panoramas #vertices #surfaces #segments #objects #categories #regions #portals #levels  0 0 0 0 0  xlo ylo zlo xhi yhi zhi  0 0 0 0 0
+L level_index #regions label  px py pz  xlo ylo zlo xhi yhi zhi  0 0 0 0 0
+R region_index level_index 0 0 label  px py pz  xlo ylo zlo xhi yhi zhi  0 0 0 0 0
+P portal_index region0_index region1_index label  xlo ylo zlo xhi yhi zhi  0 0 0 0
+S surface_index region_index 0 label px py pz  nx ny nz  xlo ylo zlo xhi yhi zhi  0 0 0 0 0
+V vertex_index surface_index label  px py pz  nx ny nz  0 0 0
+P name  panorama_index region_index 0  px py pz  0 0 0 0 0
+I image_index panorama_index  name camera_index yaw_index e00 e01 e02 e03 e10 e11 e12 e13 e20 e21 e22 e23 e30 e31 e32 e33  i00 i01 i02  i10 i11 i12 i20 i21 i22  width height  px py pz  0 0 0 0 0
+C category_index category_mapping_index category_mapping_name mpcat40_index mpcat40_name 0 0 0 0 0
+O object_index region_index category_index px py pz  a0x a0y a0z  a1x a1y a1z  r0 r1 r2 0 0 0 0 0 0 0 0 
+E segment_index object_index id area px py pz xlo ylo zlo xhi yhi zhi  0 0 0 0 0
